@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Windows XP — Karan's corner</title>
+  </head>
+  <body>
+    <p>
+      <a href="/">Home</a>
+      <button id="fullscreen" type="button">Fullscreen</button>
+    </p>
+    <p id="status">Loading emulator…</p>
+    <div id="screen_container">
+      <div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
+      <canvas style="display: none"></canvas>
+    </div>
+
+    <script type="module">
+      import { V86 } from "/xp/v86/libv86.mjs";
+
+      const status = document.getElementById("status");
+      const diskUrl = "https://xp-assets.shrikaranhanda.com/xp.img";
+
+      async function fileSize(url) {
+        const response = await fetch(url, { method: "HEAD" });
+        if (!response.ok) {
+          throw new Error(`Could not load ${url}`);
+        }
+        return Number(response.headers.get("content-length"));
+      }
+
+      try {
+        const options = {
+          wasm_path: "/xp/v86/v86.wasm",
+          memory_size: 512 * 1024 * 1024,
+          vga_memory_size: 8 * 1024 * 1024,
+          screen_container: document.getElementById("screen_container"),
+          bios: { url: "/xp/bios/seabios.bin" },
+          vga_bios: { url: "/xp/bios/vgabios.bin" },
+          hda: {
+            url: diskUrl,
+            async: true,
+            size: await fileSize(diskUrl),
+            fixed_chunk_size: 1024 * 1024,
+          },
+          boot_order: 0x132,
+          acpi: false,
+          autostart: true,
+        };
+
+        const emulator = window.emulator = new V86(options);
+        emulator.add_listener("emulator-ready", () => {
+          status.hidden = true;
+        });
+        document.getElementById("fullscreen").addEventListener("click", () => {
+          emulator.screen_go_fullscreen();
+        });
+      } catch (error) {
+        status.hidden = false;
+        status.textContent = error.message;
+        console.error(error);
+      }
+    </script>
+  </body>
+</html>
