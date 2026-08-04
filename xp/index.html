@@ -20,7 +20,10 @@
       import { V86 } from "/xp/v86/libv86.mjs";
 
       const status = document.getElementById("status");
-      const diskUrl = "https://xp-assets.shrikaranhanda.com/xp.img";
+      const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
+      const diskUrl = localHosts.has(window.location.hostname)
+        ? "/local/xp.img"
+        : "https://xp-assets.shrikaranhanda.com/xp.img";
 
       async function fileSize(url) {
         const response = await fetch(url, { method: "HEAD" });
