@@ -1,0 +1,7 @@
+body {
+  margin: 1.65rem;
+}
+
+body > :first-child {
+  margin-top: 0;
+}
