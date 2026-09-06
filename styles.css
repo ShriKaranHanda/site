@@ -1,6 +1,7 @@
 body {
-  margin: 2.145rem;
-  margin-left: 2.68125rem;
+  width: calc(100% - 3rem);
+  max-width: 40rem;
+  margin: 2.145rem auto;
 }
 
 body > :first-child {
