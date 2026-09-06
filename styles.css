@@ -2,7 +2,7 @@ body {
   width: calc(100% - 3rem);
   max-width: 40rem;
   margin: 2.145rem auto;
-  text-align: center;
+  text-align: left;
 }
 
 body > :first-child {
