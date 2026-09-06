@@ -1,6 +1,10 @@
 body {
   width: calc(100% - 3rem);
   max-width: 40rem;
+  min-height: calc(100svh - 4.29rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 2.145rem auto;
   text-align: center;
 }
