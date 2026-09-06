@@ -10,8 +10,12 @@ body > :first-child {
 }
 
 ul {
-  padding-left: 0;
-  list-style-position: inside;
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-left: 1.5rem;
+  text-align: left;
 }
 
 .favicon {
@@ -27,6 +31,7 @@ ul {
 
 .press ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .site-nav {
