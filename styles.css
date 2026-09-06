@@ -42,8 +42,7 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: calc(1.5rem + 1px);
 }
 
 .site-nav + * {
