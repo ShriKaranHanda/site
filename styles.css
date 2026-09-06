@@ -29,9 +29,12 @@ body > :first-child {
   gap: 1em;
 }
 
+.site-nav + * {
+  margin-top: 1.5rem;
+}
+
 .portrait {
   display: block;
   max-width: 100%;
   height: auto;
-  margin-top: 1.5rem;
 }
