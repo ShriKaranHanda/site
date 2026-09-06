@@ -15,15 +15,16 @@
       <a href="/press/">Press</a>
       <a href="/contact/">Contact</a>
     </nav>
-    <p>
-      <button id="fullscreen" type="button">Fullscreen</button>
-    </p>
-    <p id="status">Loading emulator…</p>
-    <div id="screen_container">
-      <div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
-      <canvas style="display: none"></canvas>
-    </div>
-
+    <main>
+      <p>
+        <button id="fullscreen" type="button">Fullscreen</button>
+      </p>
+      <p id="status">Loading emulator…</p>
+      <div id="screen_container">
+        <div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
+        <canvas style="display: none"></canvas>
+      </div>
+    </main>
     <script type="module">
       import { V86 } from "/xp/v86/libv86.mjs";
 
