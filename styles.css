@@ -1,9 +1,6 @@
 body {
   width: calc(100% - 3rem);
   max-width: 40rem;
-  min-height: calc(100svh - 4.29rem);
-  display: flex;
-  flex-direction: column;
   margin: 2.145rem auto;
   text-align: center;
 }
@@ -12,11 +9,15 @@ body > :first-child {
   margin-top: 0;
 }
 
+main {
+  text-align: left;
+}
+
 ul {
   box-sizing: border-box;
   width: fit-content;
   max-width: 100%;
-  margin-inline: auto;
+  margin-inline: 0;
   padding-left: 1.5rem;
   text-align: left;
 }
@@ -45,30 +46,19 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  padding-bottom: calc(1.5rem + 1px);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
 }
 
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-block: 1.5rem;
-}
-
-main > :first-child {
-  margin-top: 0;
-}
-
-main > :last-child {
-  margin-bottom: 0;
+.site-nav + * {
+  margin-top: 1.5rem;
 }
 
 .portrait {
   display: block;
   max-width: 100%;
   height: auto;
-  margin-inline: auto;
+  margin-inline: 0;
 }
 
 .site-nav a[aria-current="page"] {
