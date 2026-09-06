@@ -42,9 +42,9 @@ ul {
   display: flex;
   width: fit-content;
   max-width: 100%;
-  margin-inline: auto;
+  margin-inline: 0;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1em;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #ddd;
