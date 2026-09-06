@@ -17,3 +17,7 @@ body > :first-child {
 .press h2 {
   font-size: 1.25rem;
 }
+
+.press ul {
+  list-style: none;
+}
