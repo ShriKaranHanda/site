@@ -15,7 +15,7 @@ body > :first-child {
   vertical-align: -2px;
 }
 
-.press h2 {
+.press h3 {
   font-size: 1.25rem;
 }
 
@@ -40,4 +40,8 @@ body > :first-child {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.page-title {
+  font-size: 1.5rem;
 }
