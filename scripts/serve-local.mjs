@@ -8,6 +8,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const port = 8000;
 const contentTypes = {
   ".css": "text/css; charset=utf-8",
+  ".jpeg": "image/jpeg",
   ".bin": "application/octet-stream",
   ".html": "text/html; charset=utf-8",
   ".img": "application/octet-stream",
