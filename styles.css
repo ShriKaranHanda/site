@@ -40,7 +40,7 @@ ul {
 
 .site-nav {
   display: flex;
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
   margin-inline: 0;
   flex-wrap: wrap;
