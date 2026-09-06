@@ -13,3 +13,7 @@ body > :first-child {
   margin-right: 0.3em;
   vertical-align: -2px;
 }
+
+.press h2 {
+  font-size: 1.25rem;
+}
