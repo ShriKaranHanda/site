@@ -34,7 +34,8 @@ ul {
 }
 
 .press ul,
-.around ul {
+.around ul,
+.past ul {
   list-style: none;
   padding-left: 0;
 }
