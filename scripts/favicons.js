@@ -6,6 +6,6 @@ document.querySelectorAll('a[href^="https://"]').forEach((link) => {
   icon.height = 16;
   icon.referrerPolicy = "no-referrer";
   icon.addEventListener("error", () => icon.remove(), { once: true });
-  icon.src = `https://icon.horse/icon/${new URL(link.href).hostname}`;
+  icon.src = `/images/favicons/${link.dataset.favicon || new URL(link.href).hostname}.png`;
   link.prepend(icon);
 });

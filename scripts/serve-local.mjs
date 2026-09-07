@@ -9,6 +9,7 @@ const port = 8000;
 const contentTypes = {
   ".css": "text/css; charset=utf-8",
   ".jpeg": "image/jpeg",
+  ".png": "image/png",
   ".bin": "application/octet-stream",
   ".html": "text/html; charset=utf-8",
   ".img": "application/octet-stream",

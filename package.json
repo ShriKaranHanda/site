@@ -1,0 +1,14 @@
+{
+  "name": "karans-corner",
+  "private": true,
+  "engines": { "node": ">=22.22.2" },
+  "scripts": {
+    "start": "node scripts/serve-local.mjs",
+    "favicons": "node scripts/sync-favicons.mjs",
+    "test": "node --test scripts/tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "icojs": "1.0.1",
+    "sharp": "0.35.4"
+  }
+}
