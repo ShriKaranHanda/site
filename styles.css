@@ -33,6 +33,11 @@ ul {
   font-size: 1rem;
 }
 
+.past .work-in-progress {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .press ul,
 .around ul,
 .past ul {
