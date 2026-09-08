@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "site",
+  "account_id": "6a267367d47b5e7fa1c337e9ecc8b33f",
+  "compatibility_date": "2026-09-03",
+  "build": { "command": "npm run build" },
+  "assets": { "directory": "./dist" },
+  "observability": { "enabled": true }
+}

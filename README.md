@@ -2,6 +2,15 @@
 
 Start locally with `node scripts/serve-local.mjs`, then open http://127.0.0.1:8000.
 
+## Deployment
+
+Run `npm ci` and `npm run deploy` to publish to the existing Cloudflare Worker
+`site` at https://shrikaranhanda.com. Wrangler runs `npm run build` first,
+copying the website assets into `dist/` without development files.
+
+Cloudflare Workers Builds should use `npx wrangler deploy` as its deployment
+command, with this repository's root as the root directory.
+
 ## Favicons
 
 Requires Node.js 22.22.2 or newer. Run `npm ci` once to install the image validators.

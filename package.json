@@ -1,14 +1,19 @@
 {
   "name": "karans-corner",
   "private": true,
-  "engines": { "node": ">=22.22.2" },
+  "engines": {
+    "node": ">=22.22.2"
+  },
   "scripts": {
+    "build": "node scripts/build.mjs",
+    "deploy": "wrangler deploy",
     "start": "node scripts/serve-local.mjs",
     "favicons": "node scripts/sync-favicons.mjs",
     "test": "node --test scripts/tests/*.test.mjs"
   },
   "devDependencies": {
     "icojs": "1.0.1",
-    "sharp": "0.35.4"
+    "sharp": "0.35.4",
+    "wrangler": "^4.129.1"
   }
 }
